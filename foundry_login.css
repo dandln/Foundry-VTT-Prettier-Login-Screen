@@ -18,7 +18,7 @@ based on code by u/bass-blowfish
 
 /* Logo as world title */
 #join-game #world-title {
-  background: url("naoulan_logo.webp");
+  background: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -31,7 +31,7 @@ based on code by u/bass-blowfish
 body.vtt.players .watermark:before {
   display: block;
   content: " ";
-  background: url("dnd_logo.svg");
+  background: url("PATH_TO_YOUR_FOOTER_LOGO_IMAGE_FILE");
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
