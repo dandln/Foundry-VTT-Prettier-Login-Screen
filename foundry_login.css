@@ -1,0 +1,92 @@
+/*
+------------------------------------------
+Prettier login screen by u/TheEpicSnowWolf
+based on code by u/bass-blowfish
+------------------------------------------
+*/
+
+/* Hide world description and session info */
+#join-game .right.flexcol, #join-game #world-title h1, #join-game .app h1, #join-game .left.flexcol .app:nth-of-type(2) {
+    display: none;
+}
+
+/* Login mask width and position */
+#join-game {
+  width: 400px !important;
+  top: calc(50% - 350px);
+}
+
+/* Logo as world title */
+#join-game #world-title {
+  background: url("naoulan_logo.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 120px !important;
+  border: none;
+  box-shadow: none;
+}
+
+/* D&D logo above Foundry watermark */
+body.vtt.players .watermark:before {
+  display: block;
+  content: " ";
+  background: url("dnd_logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 25px;
+  margin-top: -30px;
+  margin-bottom: 5px;
+}
+
+/* Restyle inputs */
+#join-game input, #join-game select, #join-game button {
+  min-height: 40px;
+  padding: 10px !important;
+  border: none !important;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* Restyle buttons */
+#join-game button {
+  background: rgb(150, 12, 16);
+  border: none;
+  color: #fff;
+  margin-bottom: 0px !important;
+}
+
+#join-game button:hover {
+  background: rgb(228, 9, 19);
+  box-shadow: none;
+}
+
+/* Top align form labels */
+#join-game .form-group {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+#join-game .form-group label {
+  line-height: 31px;
+  width: 100%;
+}
+
+/* Hide placeholder text */
+#join-game input[type="password"]::placeholder {
+  color:transparent;
+}
+
+/* Change login button icon */
+#join-game button[name="join"] i.fas.fa-check {
+  display: none;
+}
+
+#join-game button[name="join"]:after {
+  content: "\1F846";
+}
