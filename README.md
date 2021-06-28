@@ -10,4 +10,4 @@ If you want to keep the original world title instead of replacing it with an ima
     display: none;
 }
 ```
-![Login screen example without logo](https://static.dnd.theepicsnowwolf.com/naoulan/foundry/css_example_without_logo.jpg)
+![Login screen example without logo](https://static.dnd.theepicsnowwolf.com/naoulan/foundry/css_example_with_world_title.jpg)
