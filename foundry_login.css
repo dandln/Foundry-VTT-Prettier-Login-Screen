@@ -13,7 +13,7 @@ based on code by u/bass-blowfish
 /* Login mask width and position */
 #join-game {
   width: 400px !important;
-  top: calc(50% - 350px);
+  top: calc(50% - 300px) !important;
 }
 
 /* Logo as world title */
