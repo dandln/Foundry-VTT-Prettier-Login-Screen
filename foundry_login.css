@@ -34,6 +34,7 @@ body.vtt.players .watermark:before {
   background: url("PATH_TO_YOUR_FOOTER_LOGO_IMAGE_FILE");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   width: 100%;
   height: 25px;
   margin-top: -30px;
