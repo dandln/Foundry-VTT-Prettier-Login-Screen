@@ -6,10 +6,6 @@ based on code by u/bass-blowfish
 */
 
 :root {
-  /* Try something like the following to set a background Image
-   * url("https://wallpapercave.com/wp/wp2227193.jpg") center center / cover no-repeat; 
-  */
-  --background: url(../ui/anvil-bg.png) 50% 10% no-repeat;
   --world-logo: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
   --footer-logo: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
   --primary-color: rgb(55, 10, 75);
@@ -27,18 +23,6 @@ based on code by u/bass-blowfish
 /* Hide world description and session info */
 #join-game .right.flexcol, #join-game #world-title h1, #join-game .app h1, #join-game .left.flexcol .app:nth-of-type(2) {
   display: none;
-}
-#setup {
-  background: var(--background);
-}
-#setup:after {
-  background-color: rgb(0 0 0 / 70%);
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
 }
 #join-game #world-title {
   margin-bottom: calc(var(--world-title-margin) + 30px);
