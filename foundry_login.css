@@ -5,40 +5,98 @@ based on code by u/bass-blowfish
 ------------------------------------------
 */
 
+:root {
+  /* Try something like the following to set a background Image
+   * url("https://wallpapercave.com/wp/wp2227193.jpg") center center / cover no-repeat; 
+  */
+  --background: url(../ui/anvil-bg.png) 50% 10% no-repeat;
+  --world-logo: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
+  --footer-logo: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
+  --primary-color: rgb(55, 10, 75);
+  --primary-color-filter: brightness(85%);
+  /* Set to `block` to show world title.
+   * Set to `none` to hide world title.
+  */
+  --hide-world-title: none;  
+  /* Set to `58px` if showing world title.
+   * Set to `-15px` if hiding world title.
+  */
+  --world-title-margin: -15px;
+}
+
 /* Hide world description and session info */
 #join-game .right.flexcol, #join-game #world-title h1, #join-game .app h1, #join-game .left.flexcol .app:nth-of-type(2) {
-    display: none;
+  display: none;
+}
+#setup {
+  background: var(--background);
+}
+#setup:after {
+  background-color: rgb(0 0 0 / 70%);
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+#join-game #world-title {
+  margin-bottom: calc(var(--world-title-margin) + 30px);
+  position: relative;
+}
+#join-game #world-title h1 {
+  display: var(--hide-world-title);
+  position: absolute;
+  bottom: calc((var(--world-title-margin) + 15px) * -1);
+  left: 0px;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: normal;
+
+  max-height: 100%;
+  background: url(../ui/denim075.png) repeat;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #000;
+  padding: 0.5em;
+  color: rgb(240 240 224);
+  z-index: 30;
+
+  margin: 0;
+  background: url(../ui/denim-dark-090.png) repeat;
+  border: 2px solid rgb(17 17 17);
+  box-shadow: 0 0 10px #000;
+  color: rgb(240 240 224);
 }
 
 /* Login mask width and position */
 #join-game {
-  width: 400px !important;
-  top: calc(50% - 300px) !important;
+width: 400px !important;
+top: calc(50% - 300px) !important;
 }
 
 /* Logo as world title */
 #join-game #world-title {
-  background: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 120px !important;
-  border: none;
-  box-shadow: none;
+background: var(--world-logo);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+height: 120px !important;
+border: none;
+box-shadow: none;
 }
 
 /* D&D logo above Foundry watermark */
 body.vtt.players .watermark:before {
-  display: block;
-  content: " ";
-  background: url("PATH_TO_YOUR_FOOTER_LOGO_IMAGE_FILE");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 25px;
-  margin-top: -30px;
-  margin-bottom: 5px;
+display: block;
+content: " ";
+background: var(--footer-logo);
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+width: 100%;
+height: 25px;
+margin-top: -30px;
+margin-bottom: 5px;
 }
 
 /* Restyle inputs */
@@ -52,42 +110,43 @@ body.vtt.players .watermark:before {
 
 /* Restyle buttons */
 #join-game button {
-  background: rgb(150, 12, 16);
+  background: var(--primary-color);
   border: none;
   color: #fff;
   margin-bottom: 0px !important;
 }
 
 #join-game button:hover {
-  background: rgb(228, 9, 19);
+  /*background: rgb(228, 9, 19);*/
+  filter: var(--primary-color-filter);
   box-shadow: none;
 }
 
 /* Top align form labels */
 #join-game .form-group {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  margin-top: 0;
-  overflow: hidden;
+clear: both;
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+margin-top: 0;
+overflow: hidden;
 }
 
 #join-game .form-group label {
-  line-height: 31px;
-  width: 100%;
+line-height: 31px;
+width: 100%;
 }
 
 /* Hide placeholder text */
 #join-game input[type="password"]::placeholder {
-  color:transparent;
+color:transparent;
 }
 
 /* Change login button icon */
 #join-game button[name="join"] i.fas.fa-check {
-  display: none;
+display: none;
 }
 
 #join-game button[name="join"]:after {
-  content: "\1F846";
+content: "\1F846";
 }
