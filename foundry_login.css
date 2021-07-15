@@ -5,20 +5,29 @@ based on code by u/bass-blowfish
 ------------------------------------------
 */
 
-/* Hide world description and session info */
-#join-game .right.flexcol, #join-game #world-title h1, #join-game .app h1, #join-game .left.flexcol .app:nth-of-type(2) {
-    display: none;
+/* CONFIGURATION AREA */
+#join-game, .watermark {
+  /* Replace "url(data:image...)" with "url("PATH_TO YOUR_IMAGE")".
+     Keep as is if you don't want to add images. */
+  --login-world-logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+  --login-footer-logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+
+  /* Change this to adjust the size of the footer logo */
+  --login-footer-logo-height: 25px;
+
+  /* Here you can change the base and hover color for the buttons
+     on the login form. */
+  --login-button-color: rgb(150, 12, 16);
+  --login-button-color-hover: rgb(228, 9, 19);
+
+  /* Change to "inherit" if you want to keep the text title.
+     You then also need to remove the "World Logo" declaration. */
+  --login-show-text-title: none;
 }
 
-/* Login mask width and position */
-#join-game {
-  width: 400px !important;
-  top: calc(50% - 300px) !important;
-}
-
-/* Logo as world title */
+/* World Logo - REMOVE THIS IF YOU WANT A TEXT TITLE */
 #join-game #world-title {
-  background: url("PATH_TO_YOUR_WORLD_LOGO_IMAGE_FILE");
+  background: var(--login-world-logo);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -27,18 +36,33 @@ based on code by u/bass-blowfish
   box-shadow: none;
 }
 
-/* D&D logo above Foundry watermark */
+/* Footer Logo */
 body.vtt.players .watermark:before {
   display: block;
   content: " ";
-  background: url("PATH_TO_YOUR_FOOTER_LOGO_IMAGE_FILE");
+  background: var(--login-footer-logo);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
   width: 100%;
-  height: 25px;
-  margin-top: -30px;
+  height: var(--login-footer-logo-height);
+  margin-top: calc(calc(var(--login-footer-logo-height) * -1) - 5px);
   margin-bottom: 5px;
+}
+
+/* Hide world description and session info */
+#join-game .right.flexcol, #join-game .app:not(#world-title) h1, #join-game .left.flexcol .app:nth-of-type(2) {
+  display: none;
+}
+
+/* World title visibility */
+#join-game #world-title h1 {
+  display: var(--login-show-text-title);
+}
+
+/* Login mask width and position */
+#join-game {
+  width: 400px !important;
+  top: calc(50% - 300px) !important;
 }
 
 /* Restyle inputs */
@@ -52,14 +76,14 @@ body.vtt.players .watermark:before {
 
 /* Restyle buttons */
 #join-game button {
-  background: rgb(150, 12, 16);
+  background: var(--login-button-color);
   border: none;
   color: #fff;
   margin-bottom: 0px !important;
 }
 
 #join-game button:hover {
-  background: rgb(228, 9, 19);
+  background: var(--login-button-color-hover);
   box-shadow: none;
 }
 
