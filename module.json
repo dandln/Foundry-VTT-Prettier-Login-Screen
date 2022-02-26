@@ -1,0 +1,23 @@
+{
+	"name": "prettier-login",
+	"title": "Prettier Login Screen",
+	"description": "Prettier the login, happier the game.",
+	"version": "0.1.9",
+	"minimumCoreVersion": "9",
+	"compatibleCoreVersion": "9.238",
+	"author": "The Epic Snow Wolf, jbblily",
+	"coreTranslation": true,
+	"languages": [
+		{
+			"lang": "la",
+			"name": "Latine",
+			"path": "la.json"
+		}
+	],
+	"scripts": [],
+	"styles" : ["foundry_login.css"],
+	"packs": [],
+	"url" : "https://github.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen",
+	"manifest" : "https://raw.githubusercontent.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen/main/module.json",
+	"download" : "https://github.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen/archive/refs/tags/v0.1.9.zip"
+}
