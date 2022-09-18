@@ -1,26 +1,21 @@
 # Prettier Login Screen for Foundry VTT
 Based on [code by u/bass-blowfish](https://www.reddit.com/r/FoundryVTT/comments/nmbq55/version_2_more_user_friendly_login_screen/), this simple CSS aims to make the login screen for worlds in [Foundry VTT](https://www.foundryvtt.com/) a little bit prettier by tidying up the interface and including custom logos. It is compatible with FoundryVTT version 0.8.X, v9 and v10.
 
-To install, add the CSS to the `style.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
+## Manual Installation
+Add the CSS to the `style.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
 
-## How to use this module
-1. Download this module as Add-on module. (manifest url : https://raw.githubusercontent.com/jbblily/Foundry-VTT-Prettier-Login-Screen/jbblily-patch-1/module.json)
-2. On Setup screen, go to Configuration tab. Find "Default Language".
-3. Set defalt lanuage as "Latine - Prettier Login Screen". 
+## Installation through a Translation Module (v10 only)
+Installing the CSS as a module ensures that your modifications/additions to the CSS will not be lost with a Foundry update. See below for limitations.
+1. Install the module in Foundry through this manifest URL: `https://raw.githubusercontent.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen/main/foundry-module/module.json`
+2. Still in Foundry's Setup screen, go to "Configuration" and set "Default Language" to `Latin - Prettier Login Screen`
 ![image](https://user-images.githubusercontent.com/18694887/155840581-859ce741-cd48-490e-9fcd-9173b4aeca59.png)
-4. Restart the Foundry
+3. Save the configuration and restart Foundry
+4. The CSS sits in your user data folder at `/Data/modules/prettier-login/foundry_login.css`. The code includes instructions on how to insert your images and adjust certain variables like button colour.
 
-## Notice
-This module is technically considered as "Core Translation Moudule", which means **you can't use this module if you are using another core translation module**.
+### Limitations
+The module provided here is technically a Core Translation Module, as those allow to inject CSS that is loaded before logging into a world. It includes an empty translation catalogue for Latin, and as Foundry falls back to English for all strings not translated by the active translation module, it is able to still apply the CSS modifications while not actually changing any text.
 
-Foundry's language file falls back to default language (English) if your json file doesn't contain appropriate keys. 
-
-Therefore, the screen will be shown as English, with world's login screen css applied.
-
-A user can only use one core translation module at a time. 
-
-If you are already using other core translation module, you should manually add css file to your module.
-
+However, this also means that **you will not be able to use it if you are using Foundry in any language other than English.** If you do, your only way to apply the CSS to the login screen will be to install it manually.
 
 ## Example images
 ![Login screen example with logo](https://user-images.githubusercontent.com/18694887/155850580-f714742a-2a68-4a15-94f9-dcfbe62bf208.png)
