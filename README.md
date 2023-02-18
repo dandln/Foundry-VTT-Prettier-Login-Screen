@@ -6,7 +6,7 @@ Add the CSS to the `style.css` file in the `/resources/app/public/css` folder of
 
 ## Installation through a Translation Module (v10 only)
 Installing the CSS as a module ensures that your modifications/additions to the CSS will not be lost with a Foundry update. See below for limitations.
-1. Install the module in Foundry through this manifest URL: `https://raw.githubusercontent.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen/main/module.json`
+1. Install the module in Foundry through this manifest URL: `https://raw.githubusercontent.com/dandln/Foundry-VTT-Prettier-Login-Screen/main/module.json`
 2. Still in Foundry's Setup screen, go to "Configuration" and set "Default Language" to `Latin - Prettier Login Screen`
 ![image](https://user-images.githubusercontent.com/18694887/155840581-859ce741-cd48-490e-9fcd-9173b4aeca59.png)
 3. Save the configuration and restart Foundry
@@ -17,7 +17,5 @@ The module provided here is technically a Core Translation Module, as those allo
 
 However, this also means that **you will not be able to use it if you are using Foundry in any language other than English.** If you do, your only way to apply the CSS to the login screen will be to install it manually.
 
-## Example images
+## Example image
 ![Login screen example with logo](https://user-images.githubusercontent.com/18694887/155850580-f714742a-2a68-4a15-94f9-dcfbe62bf208.png)
-
-![Login screen example without logo](https://static.dnd.theepicsnowwolf.com/naoulan/foundry/css_example_with_world_title.jpg)
