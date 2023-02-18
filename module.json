@@ -19,9 +19,9 @@
   "styles": [
     "foundry_login.css"
   ],
-  "url": "https://github.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen",
-  "manifest": "https://raw.githubusercontent.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen/main/foundry-module/module.json",
-  "download": "https://github.com/TheEpicSnowWolf/Foundry-VTT-Prettier-Login-Screen/archive/refs/tags/v10.1.zip",
+  "url": "https://github.com/dandln/Foundry-VTT-Prettier-Login-Screen",
+  "manifest": "https://raw.githubusercontent.com/dandln/Foundry-VTT-Prettier-Login-Screen/main/module.json",
+  "download": "https://github.com/dandln/Foundry-VTT-Prettier-Login-Screen/archive/refs/tags/v10.1.zip",
   "authors": [
     {
       "name": "TheEpicSnowWolf, jbblily",
