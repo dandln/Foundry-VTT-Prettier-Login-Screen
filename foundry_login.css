@@ -113,5 +113,5 @@ body.vtt.players .watermark:before {
 }
 
 #join-game button[name="join"]:after {
-  content: "\1F846";
+  content: "\2192";
 }
