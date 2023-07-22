@@ -1,8 +1,11 @@
 # Prettier Login Screen for Foundry VTT
-Based on [code by u/bass-blowfish](https://www.reddit.com/r/FoundryVTT/comments/nmbq55/version_2_more_user_friendly_login_screen/), this simple CSS aims to make the login screen for worlds in [Foundry VTT](https://www.foundryvtt.com/) a little bit prettier by tidying up the interface and including custom logos. It is compatible with FoundryVTT version 0.8.X, v9 and v10.
+Based on [code by u/bass-blowfish](https://www.reddit.com/r/FoundryVTT/comments/nmbq55/version_2_more_user_friendly_login_screen/), this simple CSS aims to make the login screen for worlds in [Foundry VTT](https://www.foundryvtt.com/) a little bit prettier by tidying up the interface and including custom logos. It is compatible with FoundryVTT version 0.8.X, v9, v10, and v11.
 
-## Manual Installation
+## Manual Installation (v8-v10)
 Add the CSS to the `style.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
+
+## Manual Installation (v11)
+Add the CSS to the `foundry2.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
 
 ## Installation through a Translation Module (v10 only)
 Installing the CSS as a module ensures that your modifications/additions to the CSS will not be lost with a Foundry update. See below for limitations.
@@ -17,5 +20,8 @@ The module provided here is technically a Core Translation Module, as those allo
 
 However, this also means that **you will not be able to use it if you are using Foundry in any language other than English.** If you do, your only way to apply the CSS to the login screen will be to install it manually.
 
-## Example image
-![Login screen example with logo](https://user-images.githubusercontent.com/18694887/155850580-f714742a-2a68-4a15-94f9-dcfbe62bf208.png)
+## Example image (v8-v10)
+![Login screen example v8-v10](https://dnd.theepicsnowwolf.com/foundry/examples/example_v10.jpg)
+
+## Example image (v11)
+![Login screen example v11](https://dnd.theepicsnowwolf.com/foundry/examples/example_v11.jpg)
