@@ -1,0 +1,115 @@
+/*
+------------------------------------------
+Prettier login screen by github.com/dandln
+adjusted for Foundry v12
+based on code by u/bass-blowfish
+------------------------------------------
+*/
+
+/* CONFIGURATION AREA */
+body.auth, #watermark {
+  /* Replace "url(data:image...)" with "url("PATH_TO YOUR_IMAGE")".
+     Keep as is if you don't want to add images. */
+  --login-world-logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+  --login-footer-logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+
+  /* Change this to adjust the size of the footer logo */
+  --login-footer-logo-height: 25px;
+
+  /* Here you can change the base and hover color for the buttons
+     on the login form. */
+  --login-button-color: rgb(150, 12, 16);
+  --login-button-color-hover: rgb(228, 9, 19);
+
+  /* Change to "inherit" if you want to keep the text title.
+     You then also need to remove the "World Logo" declaration. */
+  --login-show-text-title: none;
+}
+
+/* World Logo - REMOVE THIS IF YOU WANT A TEXT TITLE */
+body.auth #main-header {
+  background: var(--login-world-logo);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 120px !important;
+  border: none;
+  box-shadow: none;
+}
+
+/* Footer Logo */
+body.auth #watermark::before {
+  display: block;
+  content: " ";
+  background: var(--login-footer-logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: var(--maxWidth);
+  height: var(--login-footer-logo-height);
+  margin-top: calc(calc(var(--login-footer-logo-height) * -1) + 25px);
+  margin-bottom: 5px;
+}
+
+/* Hide world description and session info */
+#join-game-world, #join-game-details {
+  display: none;
+}
+
+/* Remove second column on join-game form */
+body.join #join-game {
+  grid-template-columns: 1fr!important;
+}
+
+/* World title visibility */
+body.auth #main-header h1 {
+  display: var(--login-show-text-title);
+}
+
+/* Hide form dividers */
+#join-game .divider {
+  display: none;
+}
+
+/* Login mask width and position */
+#join-game {
+  width: 400px !important;
+  top: calc(50% - 300px) !important;
+}
+
+/* Restyle inputs */
+#join-game input, #join-game select, #join-game button {
+  min-height: 40px;
+  padding: 10px !important;
+  border: none !important;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* Restyle buttons */
+#join-game button {
+  background: var(--login-button-color);
+  border: none;
+  color: #fff;
+  margin-bottom: 0px !important;
+}
+
+#join-game button:hover {
+  background: var(--login-button-color-hover);
+  box-shadow: none;
+}
+
+/* Change login button icon */
+#join-game button[name="join"] i.fas.fa-check {
+  display: none;
+}
+
+#join-game button[name="join"]:after {
+  content: "\2192";
+  padding-left: 5px;
+}
+
+/* Add padding to icon on return to setup button */
+#join-game-setup .form-footer .fas.fa-lock {
+  padding-right: 5px;
+}
