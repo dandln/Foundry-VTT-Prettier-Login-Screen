@@ -1,11 +1,11 @@
 # Prettier Login Screen for Foundry VTT
-Based on [code by u/bass-blowfish](https://www.reddit.com/r/FoundryVTT/comments/nmbq55/version_2_more_user_friendly_login_screen/), this simple CSS aims to make the login screen for worlds in [Foundry VTT](https://www.foundryvtt.com/) a little bit prettier by tidying up the interface and including custom logos. It is compatible with FoundryVTT version 0.8.X, v9, v10, and v11.
+Based on [code by u/bass-blowfish](https://www.reddit.com/r/FoundryVTT/comments/nmbq55/version_2_more_user_friendly_login_screen/), this simple CSS aims to make the login screen for worlds in [Foundry VTT](https://www.foundryvtt.com/) a little bit prettier by tidying up the interface and including custom logos. It is compatible with FoundryVTT version 0.8.X, v9, v10, v11 and v12.
 
 ## Manual Installation (v8-v10)
-Add the CSS to the `style.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
+Add the correct CSS file from the repository to the `style.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
 
-## Manual Installation (v11)
-Add the CSS to the `foundry2.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
+## Manual Installation (v11 and v12)
+Add the correct CSS file from the repository to the `foundry2.css` file in the `/resources/app/public/css` folder of your Foundry installation. The code includes instructions on how to insert your images and adjust certain variables like button colour.
 
 ## Installation through a Translation Module (v10 only)
 Installing the CSS as a module ensures that your modifications/additions to the CSS will not be lost with a Foundry update. See below for limitations.
